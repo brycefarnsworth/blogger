@@ -43,4 +43,6 @@ class ArticlesController < ApplicationController
 	
 	redirect_to action: "index"
   end
+  
+  before_filter :require_login, except: [:index, :show]
 end
